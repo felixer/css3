@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>first-of-type</title>
+    <style media="screen">
+        .wrapper,
+        .wrapper2,
+        .wrapper3 {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 500px;
+            margin: 20px auto;
+            box-shadow: 0 0 4px #666;
+        }
+
+        .wrapper > p,
+        .wrapper > div {
+            margin: 10px 0;
+            background: green;
+            color: #fff;
+            padding: 5px;
+        }
+
+        .wrapper > div:first-of-type {
+            background: orange;
+        }
+
+        .wrapper2 > div:nth-of-type(2n+1),
+        .wrapper2 > p:nth-of-type(2n) {
+            background: orange;
+        }
+        /*或者*/
+
+        .wrapper2 > div:nth-of-type(2n-1),
+        .wrapper2 > p:nth-of-type(2n) {
+            background: orange;
+        }
+        /*或者*/
+
+        .wrapper2 > div:nth-of-type(odd),
+        .wrapper2 > p:nth-of-type(even) {
+            background: orange;
+        }
+
+        .wrapper3 > div:last-of-type {
+            background: orange;
+        }
+    </style>
+</head>
+
+<body>
+    first-of-type(n)选择器
+    <br>
+    <div class="wrapper">
+        <p>我是第一个段落</p>
+        <p>我是第二个段落</p>
+        <div>我是第一个Div元素</div>
+        <div>我是第二个Div元素</div>
+        <p>我是第三个段落</p>
+        <p>我是第四个段落</p>
+        <div>我是第三个Div元素</div>
+        <div>我是第四个Div元素</div>
+    </div>
+    <h1>nth-of-type(n)选择器</h1> “:nth-of-type(n)”选择器和“:nth-child(n)”选择器非常类似，不同的是它只计算父元素中指定的某种类型的子元素。当某个元素中的子元素不单单是同一种类型的子元素时，使用“:nth-of-type(n)”选择器来定位于父元素中某种类型的子元素是非常方便和有用的。在“:nth-of-type(n)”选择器中的“n”和“:nth-child(n)”选择器中的“n”参数也一样，可以是具体的整数，也可以是表达式，还可以是关键词。 示例演示 通过“:nth-of-type(2n)”选择器，将容器“div.wrapper”中偶数段数的背景设置为橙色。
+    <div class="wrapper2">
+        <div>我是一个Div元素</div>
+        <p>我是一个段落元素</p>
+        <div>我是一个Div元素</div>
+        <p>我是一个段落</p>
+        <div>我是一个Div元素</div>
+        <p>我是一个段落</p>
+        <div>我是一个Div元素</div>
+        <p>我是一个段落</p>
+        <div>我是一个Div元素</div>
+        <p>我是一个段落</p>
+        <div>我是一个Div元素</div>
+        <p>我是一个段落</p>
+        <div>我是一个Div元素</div>
+        <p>我是一个段落</p>
+        <div>我是一个Div元素</div>
+        <p>我是一个段落</p>
+    </div>
+    <h1>last-of-type选择器</h1> “:last-of-type”选择器和“:first-of-type”选择器功能是一样的，不同的是他选择是父元素下的某个类型的最后一个子元素。
+
+    <div class="wrapper3">
+        <div>我是第一个Div元素</div>
+        <div>我是第二个Div元素</div>
+        <div>我是第三个Div元素</div>
+        <p>我是第一个段落</p>
+        <p>我是第二个段落</p>
+        <p>我是第三个段落</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>form-selector</title>
+</head>
+
+<body>
+    <style media="screen">
+        .wrapper {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 500px;
+            margin: 20px auto;
+            box-shadow: 0 0 4px #666;
+        }
+
+        .wrapper > div {
+            margin-bottom: 20px;
+        }
+
+        .input-enabled input:enabled {
+            border: 1px solid red;
+            box-shadow: 0 0 5px red;
+        }
+    </style>
+    <h1>:enabled</h1>
+    <div class="wrapper input-enabled">
+        <div>
+            <label for="enabled">可用输入框:</label>
+            <input type="text" id="enabled" />
+        </div>
+
+        <div>
+            <label for="disabled">禁用输入框:</label>
+            <input type="text" id="disabled" disabled="disabled" />
+        </div>
+    </div>
+    <h1>:disabled</h1>
+    <style media="screen">
+        .input-disabled input[type="text"] {
+            padding: 10px;
+            border: 1px solid orange;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        .input-disabled input {
+            padding: 10px;
+            border: 1px solid orange;
+            background-color: orange;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        .input-disabled input[type="submit"]:disabled {
+            background-color: #eee;
+            border-color: #eee;
+            color: #777;
+        }
+    </style>
+
+    <form class="wrapper input-disabled" action="#">
+        <div>
+            <input type="text" />
+        </div>
+
+        <div>
+            <input type="submit" value="我要回到上一步" />
+            <input type="submit" value="禁止点下一步" disabled />
+        </div>
+    </form>
+
+    
+
+
+
+</body>
+
+</html>

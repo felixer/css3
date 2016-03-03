@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渐变</title>
+    <style media="screen">
+        .lg {
+            width: 600px;
+            height: 100px;
+            line-height: 100px;
+            /*background-image: linear-gradient(90deg,#8962c9,#7e92d2 100%);*/
+            background-image:linear-gradient(to left top,red 1px, orange,yellow,green,blue,indigo,violet 100%);
+        }
+    </style>
+</head>
+<body>
+    <h1>渐变liner-gradient</h1>
+
+    <pre>
+        linear-gradient(
+        [ &lt;angle&gt; | to &lt;side-or-corner&gt; ,]? &lt;color-stop&gt; [, &lt;color-stop&gt;]+ )
+        \---------------------------------/ \----------------------------/
+        Definition of the gradient line        List of color stops
+
+        where &lt;side-or-corner&gt; = [left | right] || [top | bottom]
+        and &lt;color-stop&gt;     = &lt;color&gt; [ &lt;percentage&gt; | &lt;length&gt; ]?
+    </pre>
+    <div class="lg">
+        从右下到左上渐变，颜色后可以设置百分比或者长度
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>target-selector</title>
+    <style media="screen">
+        .menuSection {
+            display: none;
+        }
+        #brand:target {
+            background: orange;
+            color: #fff;
+            display: block;
+        }
+
+        #jake:target {
+            background: blue;
+            color: #fff;
+            display: block;
+        }
+
+        #aron:target {
+            background: red;
+            color: #fff;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    target选择器，当a标签的href属性为#xxx的形式时，使用#xxx:target可单独对跳转到的target设置样式
+
+    <ul>
+        <li>
+            <h2><a href="#brand">Brand</a></h2>
+            <div class="menuSection" id="brand">
+                content for Brand
+            </div>
+        </li>
+        <li>
+            <h2><a href="#jake">Brand</a></h2>
+            <div class="menuSection" id="jake">
+                content for jake
+            </div>
+        </li>
+        <li>
+            <h2><a href="#aron">Brand</a></h2>
+            <div class="menuSection" id="aron">
+                content for aron
+            </div>
+        </li>
+    </ul>
+</body>
+
+</html>

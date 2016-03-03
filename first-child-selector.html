@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>first-child-selector</title>
+    <style media="screen">
+        ul>li:first-child > a {
+            color:red;
+        }
+
+        ul {
+            border: 1px solid #ccc;
+            list-style: none;
+            width: 220px;
+            margin: 20px auto;
+            padding: 0px;
+        }
+
+        ul > li {
+            padding: 10px;
+            border-bottom: 3px solid #ccc;
+        }
+
+        ul > li:last-child {
+          border-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="xxx">Link 1</a></li>
+        <li><a href="xxx">Link 2</a></li>
+        <li><a href="xxx">Link 3</a></li>
+        <li><a href="xxx">Link 4</a></li>
+        <li><a href="xxx">Link 5</a></li>
+    </ul>
+
+
+</body>
+</html>

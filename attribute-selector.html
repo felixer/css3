@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attribute-selector</title>
+    <style media="screen">
+        a[href$="pdf"] {
+            color:rgb(171, 66, 181);
+        }
+        a[href^="icon"] {
+            color:red;
+        }
+        a[title*="title"] {
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>属性选择器</h1>
+    <ul>
+        <li>
+            E[att^="val"],元素E包含att属性，且其开头为val
+        </li>
+        <li>
+            E[att$="val"],元素E包含att属性，且其结尾为val属性
+        </li>
+        <li>
+            E[att*="val"],元素E包含att属性，且任意位置包含val属性
+        </li>
+    </ul>
+    <a href="xxx.pdf">我链接的是PDF文件</a>
+    <a href="#" class="icon">我类名是icon</a>
+    <a href="#" title="我的title是more">我的title是more</a>
+</body>
+</html>

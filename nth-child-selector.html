@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nth-child-selector</title>
+    <style media="screen">
+        .n1 > li:nth-child(2n) {
+            color:red;
+        }
+        .n2 > li:nth-last-child(2n) {
+            color:red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>nth_child</h1>
+    <ul class="n1">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+    </ul>
+    <h1>nth_last_child</h1>
+    <ul class="n2">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+    </ul>
+</body>
+</html>

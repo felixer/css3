@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>border-radious</title>
+    <style type="text/css">
+        .circle {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(175, 9, 82);
+            /*border-radius: 100px 0 0 0;*/
+            border-radius: 100px;
+        }
+
+        .semi-circle {
+            float: left;
+        }
+
+        .semi-circle1 {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(28, 49, 255);
+            border-radius: 100px 100px 0 0;
+        }
+        .semi-circle2 {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(28, 49, 255);
+            border-radius: 0 0 100px 100px;
+        }
+        .semi-circle3 {
+            width: 100px;
+            height: 200px;
+            background-color: rgb(28, 49, 255);
+            border-radius: 100px 0 0 100px;
+        }
+        .semi-circle4 {
+            width: 100px;
+            height: 200px;
+            background-color: rgb(28, 49, 255);
+            border-radius: 0px 100px 100px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+    <h3>
+        半径以Div的中心为原点,设置方向从左上开始顺时针一周定义
+    </h3>
+    
+    <div class="semi-circle1"></div>
+    <h3>上半圆</h3>
+    <div class="semi-circle2"></div>
+    <h3>下半圆</h3>
+    <div class="semi-circle3"></div>
+    <h3>左半圆</h3>
+    <div class="semi-circle4"></div>
+    <h3>右半圆</h3>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>not-selector</title>
+    <style media="screen">
+
+        form {
+            width: 200px;
+            margin: 20px auto;
+        }
+
+        div {
+            margin-bottom: 20px;
+        }
+
+        input:not([type="submit"]) {
+            border: 1px solid red;
+        }
+
+        /*input:not(#password) {
+            border: 1px solid red;
+        }*/
+
+
+    </style>
+</head>
+
+<body>
+    :not选择器称为否定选择器，和jQuery中的:not选择器一模一样，可以选择除某个元素之外的所有元素。就拿form元素来说，比如说你想给表单中除submit按钮之外的input元素添加红色边框
+    <form action="#">
+        <div>
+            <label for="name">Text Input:</label>
+            <input type="text" name="name" id="name" placeholder="John Smith" />
+        </div>
+        <div>
+            <label for="name">Password Input:</label>
+            <input type="text" id="password" name="password" id="name" placeholder="John Smith" />
+        </div>
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>​
+</body>
+
+</html>
